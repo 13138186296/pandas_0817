@@ -1,5 +1,5 @@
 import pandas as pd
-import openpyxl
+
 
 def age_18_to_30(a):
     return 5<=a<10
@@ -21,14 +21,12 @@ df = pd.read_excel('./data/6.xls')
 
 # 计算不同省份的快递费
 
-result =df.loc[df['寄达省名称']=='浙江省']
-print(result[['可售卖产品','邮件号','寄件人','寄达省名称','重量(克)','总邮资']])
+result = df.loc[df['寄达省名称'] == '浙江省']
+print(result[['可售卖产品', '邮件号', '寄件人', '寄达省名称', '重量(克)', '总邮资']])
 
-
-res = df.groupby('寄件人').sum()
-print(res)
-
-# resa = pd.DataFrame([res])
-
-res.to_excel('./data/tongji.xlsx')
-
+# res = df.groupby('寄件人').sum()
+# print(res)
+#
+# # resa = pd.DataFrame([res])
+#
+# res.to_excel('./data/tongji.xlsx')
